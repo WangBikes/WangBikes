@@ -9,18 +9,15 @@ class login_screen(Tk):
 
     
     self.lblUsername = Label(self, text='Username', font='arial 15 bold') 
-    self.lblPassword = Label(self, text='Password', font='arial 15 bold') #create a label for passwords
-    self.lblUsername.place(x=20,y=40) #place the username and password labels
+    self.lblPassword = Label(self, text='Password', font='arial 15 bold') 
+    self.entryUsername = Entry(self)
+    self.entryPassword = Entry(self,show='*')
+    self.lblUsername.place(x=20,y=40) 
     self.lblPassword.place(x=20,y=100)
+    self.entryUsername.place(x=140,y=80)
+    self.entryPassword.place(x=140,y=105)
 
-    self.entUsername = Label(self, text='', font='arial 15 bold') #create a label for username
-    self.entPassword = Label(self, text='', font='arial 15 bold') #create a label for passwords
-    self.entUsername.place(x=120,y=40) #place the username and password labels
-    self.entPassword.place(x=120,y=100)
-#login screen
-#login function
-#register
-if __name__ == '__main__': #when main.py is ran do the following
+
+if __name__ == '__main__':
   myWindow = login_screen()
   myWindow.mainloop()
-  
