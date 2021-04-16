@@ -1,6 +1,7 @@
 from tkinter import *
 
-class SignUpScreen(Tk):
+class adminPage(Tk):
+
   def __init__(self):
       super().__init__()
       self.title('something')

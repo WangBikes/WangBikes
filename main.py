@@ -6,3 +6,6 @@ if __name__ == '__main__':
   gui = loginPage.LoginScreen()
   gui.geometry('500x500')
   gui.mainloop()
+  print('the program is running...')
+  # hello rory ;) 
+  # goodbye

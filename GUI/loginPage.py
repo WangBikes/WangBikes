@@ -1,6 +1,7 @@
-from tkinter import Tk,Label,Button,Entry # import the tkinter module for gui
+from tkinter import * # import the tkinter module for gui
 from GUI.shopPage import ShopScreen
 from GUI.signupPage import SignUpScreen
+from GUI.adminPage import adminPage
 
 class LoginScreen(Tk):
   def __init__(self):
@@ -13,7 +14,7 @@ class LoginScreen(Tk):
     self.lblPassword = Label(self, text='Password', font='arial 15 bold') 
 
     self.entryUsername = Entry(self)
-    self.entryPassword = Entry(self,show='*')
+    self.entryPassword = Entry(self,show='🤫')
 
     self.buttonLogin = Button(self,text='Login',bg='blue',fg='white',command=self.checkLogin)
     self.buttonSignup = Button(self,text='Sign up',bg='blue',fg='white',command=self.signup)
@@ -32,7 +33,25 @@ class LoginScreen(Tk):
     password = self.entryPassword.get()
     print(username,password)
   def signup(self):
-    print('redirect to sign up')    
+    print('redirect to sign up')
+
+  def showShopPage(self):
+    gui = ShopScreen()
+    gui.geometry('500x500')
+    gui.mainloop()
+
+  def showAdminPage(self):
+    gui =  adminPage()
+    gui.geometry('500x500')
+    gui.mainloop()
+    
+
+  def showSignupPage(self):
+    gui = SignUpScreen()
+    gui.geometry('500x500')
+    gui.mainloop()
+    
+     
     
 
 if __name__ == '__main__':
