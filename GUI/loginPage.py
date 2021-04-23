@@ -14,7 +14,7 @@ class LoginScreen(Tk):
     self.lblPassword = Label(self, text='Password', font='arial 15 bold') 
 
     self.entryUsername = Entry(self)
-    self.entryPassword = Entry(self,show='🤫')
+    self.entryPassword = Entry(self,show='*')
 
     self.buttonLogin = Button(self,text='Login',bg='blue',fg='white',command=self.checkLogin)
     self.buttonSignup = Button(self,text='Sign up',bg='blue',fg='white',command=self.signup)
@@ -32,12 +32,16 @@ class LoginScreen(Tk):
     username= self.entryUsername.get()
     password = self.entryPassword.get()
     print(username,password)
+    
   def signup(self):
-    print('redirect to sign up')
+    gui = SignUpScreen()
+    gui.geometry('500x500')
+    gui.mainLoop()
+    
 
   def showShopPage(self):
     gui = ShopScreen()
-    gui.geometry('500x500')
+    gui.geometry('1000x1000')
     gui.mainloop()
 
   def showAdminPage(self):
